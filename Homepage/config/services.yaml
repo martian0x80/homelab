@@ -1,0 +1,98 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services
+
+- Administration:
+    - Proxmox:
+      href: https://{SERVICEIP}:{PORT}/
+        description: Proxmox Virtual Environment
+        siteMonitor: https://{SERVICEIP}:{PORT}/
+        icon: proxmox.svg
+        widget:
+          type: proxmox
+          url: https://{SERVICEIP}:{PORT}
+          username: {YOURUSERNAME}
+          password: {YOURPASSWORD}
+          fields: ["vms", "lxc", "resources.cpu", "resources.mem"]
+    - Adguard Home:
+        href: http://{SERVICEIP}:{PORT}/
+        description: Adguard Home DNS Server
+        siteMonitor: http://{SERVICEIP}:{PORT}/
+        icon: adguard-home.svg
+        widget:
+          type: adguard
+          url: http://{SERVICEIP}:{PORT}
+          username: {YOURUSERNAME}
+          password: {YOURPASSWORD}
+    - Alpine SMB NAS:
+        description: smb://NASIP
+        icon: alpine.svg
+
+- Media:
+    - Jellyfin:
+        href: http://{SERVICEIP}:{PORT}/
+        siteMonitor: http://{SERVICEIP}:{PORT}/
+        description: Jellyfin Media Server
+        icon: jellyfin.svg
+        widget:
+          type: jellyfin
+          url: http://{SERVICEIP}:{PORT}
+          key: APIKEY
+          enableNowPlaying: true
+          enableBlocks: false
+    - JellySeerr:
+        href: http://{SERVICEIP}:{PORT}/
+        siteMonitor: http://{SERVICEIP}:{PORT}/
+        icon: jellyseerr.svg
+        widget:
+          type: jellyseerr
+          url: http://{SERVICEIP}:{PORT}
+          key: APIKEY
+    - Sonarr:
+        href: http://{SERVICEIP}:{PORT}/
+        siteMonitor: http://{SERVICEIP}:{PORT}/
+        icon: sonarr.svg
+        widget:
+          type: sonarr
+          url: http://{SERVICEIP}:{PORT}
+          key: APIKEY
+    - Radarr:
+        href: http://{SERVICEIP}:{PORT}/
+        siteMonitor: http://{SERVICEIP}:{PORT}/
+        icon: radarr.svg
+        widget:
+          type: radarr
+          url: http://{SERVICEIP}:{PORT}
+          key: APIKEY
+    - Prowlarr:
+        href: http://{SERVICEIP}:{PORT}/
+        siteMonitor: http://{SERVICEIP}:{PORT}/
+        icon: prowlarr.svg
+        widget:
+          type: prowlarr
+          url: http://{SERVICEIP}:{PORT}
+          key: APIKEY
+    - qBittorrent:
+        href: http://{SERVICEIP}:{PORT}/
+        #siteMonitor: http://{SERVICEIP}:{PORT}/
+        icon: qbittorrent.svg
+        widget:
+          type: qbittorrent
+          url: http://{SERVICEIP}:{PORT}
+          username: {YOURUSERNAME}
+          password: {YOURPASSWORD}
+
+- Misc:
+  - Stirling-PDF:
+      href: http://{SERVICEIP}:{PORT}/
+      siteMonitor: http://{SERVICEIP}:{PORT}/
+      icon: stirling-pdf.svg
+  - Nginx Proxy Manager:
+      href: http://{SERVICEIP}:{PORT}/
+      siteMonitor: http://{SERVICEIP}:{PORT}/
+      icon: nginx-proxy-manager.svg
+  - Flaresolverr:
+      href: http://{SERVICEIP}:{PORT}/
+      siteMonitor: http://{SERVICEIP}:{PORT}/
+      icon: flaresolverr.svg
+

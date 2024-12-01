@@ -1,0 +1,39 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/settings
+
+
+title: My Homelab
+
+background:
+  image: bg1.png
+  blur: sm
+  saturate: 50
+  brightness: 70
+  opacity: 50
+
+statusStyle: dot
+
+cardBlur: xl
+
+headerStyle: clean
+
+iconStyle: theme
+
+layout:
+  Administration:
+    style: row
+    columns: 3
+  Media:
+    style: row
+    columns: 4
+  Misc:
+    style: row
+    columns: 5
+
+quicklaunch:
+  hideInternetSearch: true
+
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: weatherapiapikey
